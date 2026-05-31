@@ -229,22 +229,22 @@ Notes: ${cleanNotes}`;
         {/* Quick Contact */}
         <section className="py-20">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              <Card className="card-spiritual hover-lift cursor-pointer" onClick={handleCall}>
-                <CardContent className="p-8 text-center">
-                  <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2 text-divine">Call Now</h3>
-                  <p className="text-lg text-primary font-semibold mb-2">+91 9908590094</p>
-                  <p className="text-muted-foreground">Instant support and booking</p>
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-8 mb-16">
+              <Card className="card-spiritual hover-lift cursor-pointer p-0 flex flex-col justify-between" onClick={handleCall}>
+                <CardContent className="p-2.5 sm:p-8 text-center">
+                  <Phone className="w-6 h-6 sm:w-12 sm:h-12 text-primary mx-auto mb-1.5 sm:mb-4" />
+                  <h3 className="text-xs xs:text-sm sm:text-2xl font-bold mb-0.5 sm:mb-2 text-divine">Call Now</h3>
+                  <p className="text-[9px] xs:text-xs sm:text-lg text-primary font-semibold mb-0.5 sm:mb-2">+91 9908590094</p>
+                  <p className="text-[8px] xs:text-[10px] sm:text-base text-muted-foreground leading-normal line-clamp-1 sm:line-clamp-none">Instant support and booking</p>
                 </CardContent>
               </Card>
 
-              <Card className="card-spiritual hover-lift cursor-pointer" onClick={handleWhatsApp}>
-                <CardContent className="p-8 text-center">
-                  <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2 text-divine">WhatsApp</h3>
-                  <p className="text-lg text-primary font-semibold mb-2">+91 9908590094</p>
-                  <p className="text-muted-foreground">Quick quotes and easy booking</p>
+              <Card className="card-spiritual hover-lift cursor-pointer p-0 flex flex-col justify-between" onClick={handleWhatsApp}>
+                <CardContent className="p-2.5 sm:p-8 text-center">
+                  <MessageCircle className="w-6 h-6 sm:w-12 sm:h-12 text-primary mx-auto mb-1.5 sm:mb-4" />
+                  <h3 className="text-xs xs:text-sm sm:text-2xl font-bold mb-0.5 sm:mb-2 text-divine">WhatsApp</h3>
+                  <p className="text-[9px] xs:text-xs sm:text-lg text-primary font-semibold mb-0.5 sm:mb-2">+91 9908590094</p>
+                  <p className="text-[8px] xs:text-[10px] sm:text-base text-muted-foreground leading-normal line-clamp-1 sm:line-clamp-none">Quick quotes and easy booking</p>
                 </CardContent>
               </Card>
             </div>
@@ -252,19 +252,19 @@ Notes: ${cleanNotes}`;
             {/* Quick Booking Options */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-center mb-8 text-divine">Quick Booking</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
                 {quickBookingOptions.map((option, index) => (
                   <Card 
                     key={index} 
-                    className="card-spiritual hover-lift cursor-pointer"
+                    className="card-spiritual hover-lift cursor-pointer p-0 flex flex-col justify-between"
                     onClick={() => handleQuickWhatsApp(option.message)}
                   >
-                    <CardHeader>
-                      <CardTitle className="text-divine">{option.title}</CardTitle>
-                      <CardDescription>{option.description}</CardDescription>
+                    <CardHeader className="p-2.5 sm:p-6 pb-1 sm:pb-4">
+                      <CardTitle className="text-xs xs:text-sm sm:text-xl font-bold text-divine line-clamp-1">{option.title}</CardTitle>
+                      <CardDescription className="text-[9px] xs:text-[10px] sm:text-sm text-muted-foreground line-clamp-2 min-h-[2.25rem] sm:min-h-0">{option.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <Button variant="outline" className="w-full btn-outline-divine">
+                    <CardContent className="p-2.5 sm:p-6 pt-0 sm:pt-0">
+                      <Button variant="outline" className="w-full btn-outline-divine text-[9px] xs:text-[10px] sm:text-sm h-7 xs:h-8 px-1 sm:px-2">
                         Get Quote
                       </Button>
                     </CardContent>
@@ -345,21 +345,21 @@ Notes: ${cleanNotes}`;
                         {/* Number of Passengers (Optional) - Left side (7 columns) */}
                         <div className="space-y-2 col-span-12 md:col-span-7">
                           <Label>Number of Passengers (Optional)</Label>
-                          <div className="flex items-center justify-around bg-secondary/10 rounded-lg border border-border h-10 px-2 mt-2">
-                            <div className="flex items-center space-x-2">
-                              <span className="text-xs font-medium text-muted-foreground">Adults</span>
-                              <div className="flex items-center space-x-1">
+                          <div className="flex items-center justify-between bg-secondary/10 rounded-lg border-2 border-border h-12 px-3 mt-2">
+                            <div className="flex items-center space-x-2 flex-1 justify-center min-w-0">
+                              <span className="text-xs font-medium text-muted-foreground flex-shrink-0">Adults</span>
+                              <div className="flex items-center space-x-1.5 flex-shrink-0">
                                 <button
                                   type="button"
-                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
+                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
                                   onClick={() => setAdults(prev => Math.max(0, prev - 1))}
                                 >
                                   -
                                 </button>
-                                <span className="text-xs font-semibold w-4 text-center text-foreground">{adults}</span>
+                                <span className="text-xs font-semibold w-4 text-center text-foreground flex-shrink-0">{adults}</span>
                                 <button
                                   type="button"
-                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
+                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
                                   onClick={() => setAdults(prev => prev + 1)}
                                 >
                                   +
@@ -367,22 +367,22 @@ Notes: ${cleanNotes}`;
                               </div>
                             </div>
                             
-                            <div className="w-px h-5 bg-border" />
+                            <div className="w-px h-6 bg-border flex-shrink-0 mx-1" />
                             
-                            <div className="flex items-center space-x-2">
-                              <span className="text-xs font-medium text-muted-foreground">Children</span>
-                              <div className="flex items-center space-x-1">
+                            <div className="flex items-center space-x-2 flex-1 justify-center min-w-0">
+                              <span className="text-xs font-medium text-muted-foreground flex-shrink-0">Children</span>
+                              <div className="flex items-center space-x-1.5 flex-shrink-0">
                                 <button
                                   type="button"
-                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
+                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
                                   onClick={() => setChildren(prev => Math.max(0, prev - 1))}
                                 >
                                   -
                                 </button>
-                                <span className="text-xs font-semibold w-4 text-center text-foreground">{children}</span>
+                                <span className="text-xs font-semibold w-4 text-center text-foreground flex-shrink-0">{children}</span>
                                 <button
                                   type="button"
-                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
+                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
                                   onClick={() => setChildren(prev => prev + 1)}
                                 >
                                   +
