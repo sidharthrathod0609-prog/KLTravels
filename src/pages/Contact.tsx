@@ -345,21 +345,21 @@ Notes: ${cleanNotes}`;
                         {/* Number of Passengers (Optional) - Left side (7 columns) */}
                         <div className="space-y-2 col-span-12 md:col-span-7">
                           <Label>Number of Passengers (Optional)</Label>
-                          <div className="flex items-center justify-between bg-secondary/10 rounded-lg border-2 border-border h-12 px-3 mt-2">
-                            <div className="flex items-center space-x-2 flex-1 justify-center min-w-0">
-                              <span className="text-xs font-medium text-muted-foreground flex-shrink-0">Adults</span>
-                              <div className="flex items-center space-x-1.5 flex-shrink-0">
+                          <div className="flex items-center justify-around bg-secondary/10 rounded-lg border border-border h-10 px-2 mt-2">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-xs font-medium text-muted-foreground">Adults</span>
+                              <div className="flex items-center space-x-1">
                                 <button
                                   type="button"
-                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
+                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
                                   onClick={() => setAdults(prev => Math.max(0, prev - 1))}
                                 >
                                   -
                                 </button>
-                                <span className="text-xs font-semibold w-4 text-center text-foreground flex-shrink-0">{adults}</span>
+                                <span className="text-xs font-semibold w-4 text-center text-foreground">{adults}</span>
                                 <button
                                   type="button"
-                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
+                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
                                   onClick={() => setAdults(prev => prev + 1)}
                                 >
                                   +
@@ -367,22 +367,22 @@ Notes: ${cleanNotes}`;
                               </div>
                             </div>
                             
-                            <div className="w-px h-6 bg-border flex-shrink-0 mx-1" />
+                            <div className="w-px h-5 bg-border" />
                             
-                            <div className="flex items-center space-x-2 flex-1 justify-center min-w-0">
-                              <span className="text-xs font-medium text-muted-foreground flex-shrink-0">Children</span>
-                              <div className="flex items-center space-x-1.5 flex-shrink-0">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-xs font-medium text-muted-foreground">Children</span>
+                              <div className="flex items-center space-x-1">
                                 <button
                                   type="button"
-                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
+                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
                                   onClick={() => setChildren(prev => Math.max(0, prev - 1))}
                                 >
                                   -
                                 </button>
-                                <span className="text-xs font-semibold w-4 text-center text-foreground flex-shrink-0">{children}</span>
+                                <span className="text-xs font-semibold w-4 text-center text-foreground">{children}</span>
                                 <button
                                   type="button"
-                                  className="h-6 w-6 flex-shrink-0 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground font-bold"
+                                  className="h-6 w-6 rounded-full border border-border flex items-center justify-center text-xs hover:bg-secondary active:scale-95 transition-all text-foreground"
                                   onClick={() => setChildren(prev => prev + 1)}
                                 >
                                   +
