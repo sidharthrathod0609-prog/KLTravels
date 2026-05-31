@@ -143,7 +143,7 @@
     background: var(--hero-gradient);
   }
 
-  .divine-gradient {
+  .divine-gradient, .bg-gradient-divine {
     background: var(--divine-gradient);
   }
 
@@ -210,65 +210,83 @@
 
   /* Global section padding adjustments to remove extra space up/down of titles */
   .py-20 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-12 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
   }
 
   .pt-20 {
-    padding-top: 4rem !important; /* Reduces space above page title caused by pt-20 on main tag */
+    padding-top: 4.25rem !important; /* Reduces space above page title caused by pt-20 on main tag */
   }
 
   /* Global margins adjustments to remove extra spacing on mobile */
   .mb-4 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
   }
   .mb-6 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.375rem !important;
   }
   .mb-8 {
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
   }
   .mb-12 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.75rem !important;
   }
   .mb-16 {
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 1rem !important;
   }
   .mb-20 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
   }
   .mt-12 {
-    margin-top: 1rem !important;
+    margin-top: 0.75rem !important;
   }
   .mt-16 {
-    margin-top: 1.25rem !important;
+    margin-top: 1rem !important;
   }
 
   /* Specific home page hero title scaling */
   .hero-title {
-    font-size: 1.6rem !important; /* Scale down title text for phone view */
-    line-height: 2.2rem !important;
-  }
-
-  /* Global typography adjustments */
-  h1, .text-5xl, .text-6xl, .text-7xl {
-    font-size: 2rem !important; /* 32px */
-    line-height: 2.5rem !important;
-  }
-
-  h2, .text-4xl {
-    font-size: 1.5rem !important; /* 24px */
+    font-size: 1.5rem !important; /* Scale down title text for phone view */
     line-height: 2rem !important;
   }
 
+  .hero-title .since-text {
+    font-size: 1.05rem !important; /* Make Since 2015 smaller on mobile */
+    font-weight: 500 !important;
+    color: hsl(var(--muted-foreground)) !important;
+    margin-top: 0.25rem !important;
+    display: block !important;
+  }
+
+  /* Global typography adjustments to decrease text size on phone view */
+  h1, .text-5xl, .text-6xl, .text-7xl {
+    font-size: 1.8rem !important; /* 28.8px */
+    line-height: 2.2rem !important;
+  }
+
+  h2, .text-4xl {
+    font-size: 1.35rem !important; /* 21.6px */
+    line-height: 1.8rem !important;
+  }
+
   h3, .text-3xl {
-    font-size: 1.25rem !important; /* 20px */
-    line-height: 1.75rem !important;
+    font-size: 1.15rem !important; /* 18.4px */
+    line-height: 1.5rem !important;
   }
 
   .text-xl {
-    font-size: 1rem !important; /* 16px */
-    line-height: 1.5rem !important;
+    font-size: 0.9rem !important; /* 14.4px */
+    line-height: 1.35rem !important;
+  }
+
+  .text-lg {
+    font-size: 0.85rem !important; /* 13.6px */
+    line-height: 1.25rem !important;
   }
 
   /* Custom component refinements */
