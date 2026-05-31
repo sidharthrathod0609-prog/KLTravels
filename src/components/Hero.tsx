@@ -26,12 +26,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="hero-title text-5xl lg:text-7xl font-bold mb-6 text-foreground">
-            <span className="block sm:inline">
-              🚗 <span className="text-divine">Safe. Spiritual. Trusted</span>
-            </span>
-            <span className="since-text block sm:inline sm:text-5xl lg:text-7xl text-muted-foreground sm:text-foreground">
-              <span className="inline sm:hidden"> - </span>Since 2015.
-            </span>
+            🚗 <span className="text-divine">Safe. Spiritual. Trusted</span> Since 2015.
           </h1>
 
           {/* Subheadline */}
